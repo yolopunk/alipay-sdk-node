@@ -4,7 +4,8 @@
   "description": "alipay sdk node",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "eslint": "standard"
   },
   "repository": "git@github.com:cynosures/alipay-sdk-node.git",
   "author": "cynosure",
@@ -13,6 +14,7 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "mocha": "^3.4.2"
+    "mocha": "*",
+    "standard": "*"
   }
 }

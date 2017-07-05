@@ -11,7 +11,9 @@
   "author": "cynosure",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.4"
+    "axios": "^0.16.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1"
   },
   "devDependencies": {
     "mocha": "*",

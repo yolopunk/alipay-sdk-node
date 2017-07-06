@@ -1,6 +1,6 @@
 {
   "name": "alipay-sdk-node",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "alipay sdk node",
   "main": "index.js",
   "scripts": {

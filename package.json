@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "description": "alipay sdk node",
   "main": "index.js",
+  "standard": {
+    "rules": {
+      "properties": "never"
+    }
+  },
   "scripts": {
     "test": "mocha",
     "eslint": "standard"

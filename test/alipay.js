@@ -26,7 +26,8 @@ describe('Alipay', function () {
   describe('#constructor', function () {
     it('appId is required', function () {
       try {
-        new Alipay({})
+        const alipay = new Alipay({})
+        console.log(alipay)
       } catch (err) {
         assert.equal(err.code, 'ERR_ASSERTION')
       }
@@ -35,7 +36,7 @@ describe('Alipay', function () {
 
   describe('#formatter', function () {
     it('should get the exact sign string', function () {
-       assert.equal(Alipay.formatter(params), formattedParams)
+      assert.equal(Alipay.formatter(params), formattedParams)
     })
   })
 })

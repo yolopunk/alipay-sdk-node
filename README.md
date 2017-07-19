@@ -29,7 +29,7 @@
 
 ### APP Pay
 * get the string of order info
-* params: biz_content [click](https://docs.open.alipay.com/204/105465/)
+* params: biz_content {JSON} [click](https://docs.open.alipay.com/204/105465/)
 ```js
   alipay.getOrderInfoStr({
     subject: 'xxx',
@@ -39,8 +39,15 @@
   })
 ```
 
+### Check sign
+* params: request body {JSON} [click](https://docs.open.alipay.com/204/105301/)
+* return: Boolean
+```js
+  alipay.rsaCheck(request.body)
+```
+
 ### Refund
-* params: biz_content [click](https://docs.open.alipay.com/api_1/alipay.trade.refund)
+* params: biz_content {JSON} [click](https://docs.open.alipay.com/api_1/alipay.trade.refund)
 * return: Promise Or Callback
 ```js
   alipay.refund({

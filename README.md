@@ -1,7 +1,12 @@
 # alipay-sdk-node
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide][style-image]][style-url]
+[![Build Status][travis-image]][travis-url]
 
+[style-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
+[style-url]: https://standardjs.com
+[travis-image]: https://travis-ci.org/cynosures/alipay-sdk-node.svg?branch=master
+[travis-url]: https://travis-ci.org/cynosures/alipay-sdk-node
 
 ---
 ## Install

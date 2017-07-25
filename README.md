@@ -20,21 +20,24 @@
 
 ### Create Alipay Instance
 
+e.g.
 ```js
   const Alipay = require('alipay-sdk-node')
   const alipay = new Aliapy({
-    app_id,
-    app_public_key,
-    app_private_key,
-    alipay_public_key,
-    sign_type = 'RSA2',
-    notify_url
+    app_id: 'xxx',
+    app_private_key: 'xxx',
+    alipay_public_key: 'xxx',
+    sign_type: 'RSA2',
+    notify_url: 'xxx'
   })
 ```
 
 ### APP Pay
-* get the string of order info
+* `#getOrderInfoStr(biz_content)`: get the string of order info
 * params: biz_content {JSON} [click](https://docs.open.alipay.com/204/105465/)
+* return: String
+
+e.g.
 ```js
   alipay.getOrderInfoStr({
     subject: 'xxx',
@@ -45,15 +48,21 @@
 ```
 
 ### Check sign
+* `#rsaCheck(options)`: check sign
 * params: request body {JSON} [click](https://docs.open.alipay.com/204/105301/)
 * return: Boolean
+
+e.g.
 ```js
   alipay.rsaCheck(request.body)
 ```
 
 ### Refund
+* `#refund(biz_content[,callback])`: refund api
 * params: biz_content {JSON} [click](https://docs.open.alipay.com/api_1/alipay.trade.refund)
 * return: Promise Or Callback
+
+e.g.
 ```js
   alipay.refund({
     out_trade_no: 'xxx',

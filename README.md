@@ -6,8 +6,8 @@
 
 [style-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [style-url]: https://standardjs.com
-[travis-image]: https://travis-ci.org/cynosures/alipay-sdk-node.svg?branch=master
-[travis-url]: https://travis-ci.org/cynosures/alipay-sdk-node
+[travis-image]: https://travis-ci.org/yolopunk/alipay-sdk-node.svg?branch=master
+[travis-url]: https://travis-ci.org/yolopunk/alipay-sdk-node
 [download-image]: https://img.shields.io/npm/dm/alipay-sdk-node.svg?style=flat-square
 [download-url]: https://npmjs.org/package/alipay-sdk-node
 

@@ -3,7 +3,7 @@
 'use strict'
 
 const assert = require('assert')
-const Alipay = require('../index')
+const Alipay = require('../lib/alipay')
 
 const params = {
   app_id: '2016080700188285',
@@ -26,8 +26,7 @@ describe('Alipay', function () {
   describe('#constructor', function () {
     it('appId is required', function () {
       try {
-        const alipay = new Alipay({})
-        console.log(alipay)
+        new Alipay({}) // eslint-disable-line
       } catch (err) {
         assert.equal(err.code, 'ERR_ASSERTION')
       }

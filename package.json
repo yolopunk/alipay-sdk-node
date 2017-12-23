@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "eslint": "standard"
+    "lint": "standard"
   },
   "repository": "git@github.com:cynosures/alipay-sdk-node.git",
   "author": "cynosure",

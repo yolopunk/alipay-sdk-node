@@ -3,24 +3,25 @@
 'use strict'
 
 const assert = require('assert')
+const fs = require('fs')
+const path = require('path')
 const Alipay = require('../lib/alipay')
-
-const params = {
-  app_id: '2016080700188285',
-  method: 'alipay.trade.app.pay',
-  charset: 'utf-8',
+const alipay = new Alipay({
+  app_id: '2016091800538651',
+  app_private_key: fs.readFileSync(path.join(__dirname, 'app_private_key.pem')),
+  alipay_public_key: fs.readFileSync(path.join(__dirname, 'alipay_public_key.pem')),
   sign_type: 'RSA2',
-  timestamp: '2014-07-24 03: 07: 50',
-  biz_content: {
-    subject: 'goods',
-    out_trade_no: 'xxx',
-    total_amount: '1.00',
-    product_code: 'QUICK_MSECURITY_PAY'
-  },
-  version: '1.0',
-  sign: 'e9zEAe4TTQ4LPLQvETPoLGXTiURcxiAKfMVQ6Hrrsx2hmyIEGvSfAQzbLxHrhyZ48wOJXTsD4FPnt+YGdK57+fP1BCbf9rIVycfjhYCqlFhbTu9pFnZgT55W+xbAFb9y7vL0MyAxwXUXvZtQVqEwW7pURtKilbcBTEW7TAxzgro='
+  notify_url: 'http://notify.url',
+  return_url: 'http://return.url',
+  base_url: 'https://openapi.alipaydev.com/gateway.do'
+})
+
+const bizContent = {
+  subject: 'goods',
+  out_trade_no: 'xxx',
+  total_amount: '1.00',
+  product_code: 'QUICK_MSECURITY_PAY'
 }
-const formattedParams = 'app_id=2016080700188285&biz_content={"subject":"goods","out_trade_no":"xxx","total_amount":"1.00","product_code":"QUICK_MSECURITY_PAY"}&charset=utf-8&method=alipay.trade.app.pay&sign=e9zEAe4TTQ4LPLQvETPoLGXTiURcxiAKfMVQ6Hrrsx2hmyIEGvSfAQzbLxHrhyZ48wOJXTsD4FPnt+YGdK57+fP1BCbf9rIVycfjhYCqlFhbTu9pFnZgT55W+xbAFb9y7vL0MyAxwXUXvZtQVqEwW7pURtKilbcBTEW7TAxzgro=&sign_type=RSA2&timestamp=2014-07-24 03: 07: 50&version=1.0'
 
 describe('Alipay', function () {
   describe('#constructor', function () {
@@ -35,7 +36,16 @@ describe('Alipay', function () {
 
   describe('#formatter', function () {
     it('should get the exact sign string', function () {
-      assert.equal(Alipay.formatter(params), formattedParams)
+      const formattedParams = 'out_trade_no=xxx&product_code=QUICK_MSECURITY_PAY&subject=goods&total_amount=1.00'
+      assert.equal(Alipay.formatter(bizContent), formattedParams)
+    })
+  })
+
+  describe('#get wap page url', function (done) {
+    it('should get the exact url', function () {
+      const url = alipay.getWapPageURL(bizContent)
+      console.log('url:', url)
+      assert.equal(url, url)
     })
   })
 })

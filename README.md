@@ -49,24 +49,26 @@ e.g.
   })
 ```
 
-### WAP pay
-* `#getWapPageUrl(biz_content)`: get the url of wap pay
-* params: biz_content { JSON } [click](https://docs.open.alipay.com/203/107090/)
+### WAP pay [click](https://docs.open.alipay.com/203/107090/)
+* `#getWapPageUrl(bizContent[,publicParams])`: get the url of wap pay
+* params: bizContent { JSON: required }
+* params: publicParams { JSON: optional }, override the public params
 * return: String
 
 e.g.
 ```js
-  alipay.getWapPageUrl({
+  alipay.getWapPageURL({
     subject: 'xxx',
     out_trade_no: 'xxx',
     total_amount: 'xxx',
     product_code: 'xxx'
-  })
+  }, { return_url: 'http://xxx.com/orders/result/{id}' })
 ```
 
-### APP Pay
-* `#getOrderInfoStr(biz_content)`: get the string of order info
-* params: biz_content {JSON} [click](https://docs.open.alipay.com/204/105465/)
+### APP Pay [click](https://docs.open.alipay.com/204/105465/)
+* `#getOrderInfoStr(bizContent[,publicParams])`: get the string of order info
+* params: bizContent {JSON: required}
+* params: publicParams { JSON: optional }, override the public params
 * return: String
 
 e.g.
@@ -79,9 +81,9 @@ e.g.
   })
 ```
 
-### Check sign
+### Check sign [click](https://docs.open.alipay.com/204/105301/)
 * `#rsaCheck(options)`: check sign
-* params: request body {JSON} [click](https://docs.open.alipay.com/204/105301/)
+* params: request body {JSON}
 * return: Boolean
 
 e.g.
@@ -89,9 +91,9 @@ e.g.
   alipay.rsaCheck(request.body)
 ```
 
-### Refund
-* `#refund(biz_content[,callback])`: refund api
-* params: biz_content {JSON} [click](https://docs.open.alipay.com/api_1/alipay.trade.refund)
+### Refund  [click](https://docs.open.alipay.com/api_1/alipay.trade.refund)
+* `#refund(bizContent[,callback])`: refund api
+* params: bizContent {JSON}
 * return: Promise Or Callback
 
 e.g.

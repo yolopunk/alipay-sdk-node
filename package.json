@@ -1,6 +1,6 @@
 {
   "name": "alipay-sdk-node",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "alipay sdk node",
   "main": "index.js",
   "standard": {
@@ -16,12 +16,12 @@
   "author": "cynosure",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.16.2",
-    "lodash": "^4.17.4",
-    "moment": "^2.18.1"
+    "axios": "^0.19.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "standard": "*"
+    "mocha": "^6.1.4",
+    "standard": "^12.0.1"
   }
 }

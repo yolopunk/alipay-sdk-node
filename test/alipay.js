@@ -29,7 +29,7 @@ describe('Alipay', function () {
       try {
         new Alipay({}) // eslint-disable-line
       } catch (err) {
-        assert.equal(err.code, 'ERR_ASSERTION')
+        assert.strict.equal(err.code, 'ERR_ASSERTION')
       }
     })
   })
@@ -37,15 +37,15 @@ describe('Alipay', function () {
   describe('#formatter', function () {
     it('should get the exact sign string', function () {
       const formattedParams = 'out_trade_no=xxx&product_code=QUICK_MSECURITY_PAY&subject=goods&total_amount=1.00'
-      assert.equal(Alipay.formatter(bizContent), formattedParams)
+      assert.strict.equal(Alipay.formatter(bizContent), formattedParams)
     })
   })
 
   describe('#get wap page url', function (done) {
     it('should get the exact url', function () {
       const url = alipay.getWapPageURL(bizContent)
-      console.log('url:', url)
-      assert.equal(url, url)
+      // console.log('url:', url)
+      assert.strict.equal(url, url)
     })
   })
 })

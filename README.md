@@ -42,7 +42,7 @@ e.g.
    *  @param base_url optional, default is 'https://openapi.alipay.com/gateway.do'
    *  @param cache optional, whether cache the alipay instance or not
    * /
-  const alipay = new Aliapy({
+  const alipay = new Alipay({
     app_id: 'xxx',
     app_private_key: fs.readFileSync('filePath'),
     alipay_public_key: fs.readFileSync('filePath'),

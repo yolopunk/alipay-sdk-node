@@ -5,13 +5,15 @@ name: alipay-sdk
 steps:
   - name: build
     image: plugins/docker
+    
     settings:
       debug: true
-      repo: cynosure/alipay-sdk
+      repo: ${DOCKER_USERNAME}/alipay-sdk
       auto_tag: true
+      environment:
+        DOCKER_USERNAME:
+          from_secret: docker_username
       username:
         from_secret: docker_username
       password:
         from_secret: docker_password
-    commands:
-      - env

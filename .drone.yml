@@ -8,7 +8,7 @@ steps:
     
     settings:
       debug: true
-      repo: ${DOCKER_USERNAME}/alipay-sdk
+      repo: $${DOCKER_USERNAME}/alipay-sdk
       auto_tag: true
       environment:
         DOCKER_USERNAME:

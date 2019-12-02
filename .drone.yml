@@ -10,12 +10,7 @@ steps:
       debug: true
       repo: cynosure/alipay-sdk
       auto_tag: true
-      environment:
-        DOCKER_USERNAME:
-          from_secret: docker_username
       username:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      commands:
-        - env

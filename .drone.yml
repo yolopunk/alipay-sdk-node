@@ -1,0 +1,14 @@
+kind: pipeline
+type: docker
+name: alipay-sdk
+
+steps:
+  - name: build
+    image: plugins/docker
+    settings:
+      debug: true
+      auto_tag: true
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password

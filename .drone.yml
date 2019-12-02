@@ -5,7 +5,6 @@ name: alipay-sdk
 steps:
   - name: build
     image: plugins/docker
-    
     settings:
       debug: true
       repo: cynosure/alipay-sdk

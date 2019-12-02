@@ -7,6 +7,7 @@ steps:
     image: plugins/docker
     settings:
       debug: true
+      repo: alipay-sdk
       auto_tag: true
       username:
         from_secret: docker_username

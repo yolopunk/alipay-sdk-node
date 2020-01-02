@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "yolopunk",
+      "name": "Aaron Che",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7477825?v=4",
+      "profile": "https://github.com/yolopunk",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "alipay-sdk-node",
+  "projectOwner": "yolopunk",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

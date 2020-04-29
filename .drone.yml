@@ -7,7 +7,7 @@ steps:
     image: plugins/docker
     settings:
       repo: cynosure/alipay-sdk
-      tag: ${DRONE_TAG=latest}
+      tags: ${DRONE_TAG=latest}
       insecure: true
       username:
         from_secret: docker_username

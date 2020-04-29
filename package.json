@@ -23,5 +23,9 @@
   "devDependencies": {
     "mocha": "^7.1.2",
     "standard": "^14.3.3"
-  }
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ]
 }

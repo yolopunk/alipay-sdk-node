@@ -6,10 +6,14 @@ steps:
   - name: build
     image: plugins/docker
     settings:
-      debug: true
       repo: cynosure/alipay-sdk
-      auto_tag: true
+      tag: ${DRONE_TAG=latest}
+      insecure: true
       username:
         from_secret: docker_username
       password:
         from_secret: docker_password
+
+trigger:
+  event:
+    - tag

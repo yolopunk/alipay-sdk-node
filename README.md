@@ -16,9 +16,6 @@
 [travis-url]: https://travis-ci.org/yolopunk/alipay-sdk-node
 [download-image]: https://img.shields.io/npm/dm/alipay-sdk-node.svg?style=flat-square
 [download-url]: https://npmjs.org/package/alipay-sdk-node
-[total-visitors]: https://visitor-count-badge.herokuapp.com/total.svg?repo_id=https://github.com/yolopunk/alipay-sdk-node
-[today-visitors]: https://visitor-count-badge.herokuapp.com/today.svg?repo_id=https://github.com/yolopunk/alipay-sdk-node
-
 ---
 ## Install
 

@@ -7,8 +7,6 @@
 [![JavaScript Style Guide][style-image]][style-url]
 
 [![npm download][download-image]][download-url]
-![Total visitors][total-visitors]
-![Visitors in today][today-visitors]
 
 [style-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [style-url]: https://standardjs.com
